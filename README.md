@@ -1,63 +1,38 @@
-# AlgorithmsHw3
+List the following functions according to their order of growth from the lowest to the highest. Prove
+the accuracy of your ordering. (20 points)
+Note: Your analysis must be rigorous and precise. Merely stating the ordering without providing any
+mathematical analysis will not be graded!
+a) 5 n
+b) ∜n
+c) ln 3 (n)
+d) (n 2 )!
+e) (n!) n
+
+Q2. Consider an array consisting of integers from 0 to n; however, one integer is absent. Binary repre-
+sentation is used for the array elements; that is, one operation is insufficient to access a particular integer and
+merely a particular bit of a particular array element can be accessed at any given time and this access can be
+done in constant time. Propose a linear time algorithm that finds the absent element of the array in this set-
+ting. Rigorously show your pseudocode and analysis together with explanations. Do not use actual code in
+your pseudocode but present your actual code as a separate Python program. (20 points)
 
 
-
-1) Solve the following recurrence relation and give Ɵ relation for each of them.
-a) T(n)=27 T(n/3) +n 2
-b) T(n)=9 T(n/4) +n
-c) T(n)=2 T(n/4) +√n
-d) T(n)=2 T(√n) +1
-e) T(n)=2T(n-2), T(0)=1, T(1)=1
-f) T(n)=4T(n/2)+n, T(1)=1
-g) T(n)= 2 T(∛n)+1 , T(3)=1;
+Q3. Propose a sorting algorithm based on quicksort but this time improve its efficiency by using inser-
+tion sort where appropriate. Express your algorithm using pseudocode and analyze its expected running
+time. In addition, implement your algorithm using Python. (20 points)
 
 
+Q4. Solve the following recurrence relations
+a) x n = 7x n-1 -10x n-2 , x 0 =2, x 1 =3 (4 points)
+b) x n = 2x n-1 +x n-2 -3x n-3, x 0 =2, x 1 =1, x 2 =4 (4 points)
+c) x n = x n-1 +2 n , x 0 =5 (4 points)
+d) Suppose that a n and b n are both solutions to a recurrence relation of the form x n =αx n-1 +βx n-2 . Prove
+that for any constants c and d, ca n +db n is also a solution to the same recurrence relation. (8 points)
 
 
-2)How many lines (as a function of n) does the following program print? Write a recurrence
-relation and solve it by backward substitution. You may assume that n is a power of 2.
-function f(n)
-if n <= 1:
-print_line("**")
-else:
-for i=1 to n
-f(n/2)
-end for
-
-
-
-
-3) Let T(n) denote the worst case number of comparisons (A[0]>A[1]) made by the following
-function for an input array of n numbers. Give a recurrence relation for T(n). Solve the
-recurrence relation.
-Algorithm Function_f (A[0..n-1])
-//Input: Array A of n numbers//Output: A is sorted in increasing order
-if n=2 and A[0]>A[1], then swap(A[0],A[1])
-if n>2 then {
-Function_f (A[0..ceil(2n/3)]) .
-Function_f (A[floor(n/3)..n])
-Function_f (A[0..ceil(2n/3)])
-}
-
-
-
-
-4)
-Implement the quick sort and insertion sort algorithms and count the number of swap
-operations to compare these two algorithms. Analyze the average-case complexity of the
-algorithms. Compare the operations count in your report file to decide which algorithm is
-better and support your analysis by using the theoretical average-case analysis of your
-algorithms.
-
-
-
-5) What are the running times of each of these algorithms (in big-O notation), and which would
-you choose?
-a) An algorithm that divides the problem into 5 subproblems where the size of each
-subproblem is one third of the original problem size, solves each subproblem recursively and
-then combines the solutions to the subproblems in quadratic time.
-b) An algorithm that divides the problem into 2 subproblems where the size of each
-subproblem is half of the original problem size, solves each subproblem recursively and then
-combines the solutions to the subproblems in O(n 2 ) time.
-c) An algorithm that solves the problem by recursively solving the subproblem of size n-1 and
-then combine the solutions in linear time.
+Q5. A group of people and a group of jobs is given as input. Any person can be assigned any job and a
+certain cost value is associated with this assignment, for instance depending on the duration of time that the
+pertinent person finishes the pertinent job. This cost hinges upon the person-job assignment. Propose a poly-
+nomial-time algorithm that assigns exactly one person to each job such that the maximum cost among the
+assignments (not the total cost!) is minimized. Describe your algorithm using pseudocode and implement it
+using Python. Analyze the best case, worst case, and average-case performance of the running time of your
+algorithm. (20 points)
